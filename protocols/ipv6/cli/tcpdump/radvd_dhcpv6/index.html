@@ -24,11 +24,11 @@ html {
   color: white;
 }
 </style>
-<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.12/dist/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
 </head>
 <body>
 <svg id="mindmap"></svg>
-<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
           setTimeout(r);
         })(() => {
   const { markmap, mm } = window;
@@ -47,6 +47,6 @@ html {
               if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
                 document.documentElement.classList.add("markmap-dark");
               }
-            })(() => window.markmap,null,{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"color":["blue"],"initialExpandLevel":4})</script>
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"icmpv6 RA and dhcpv6","children":[{"content":"<pre data-lines=\"10,14\"><code class=\"language-bash\">tcpdump -i eth0 -n <span class=\"hljs-string\">&quot;(icmp6 and ip6[40] == 134) or (udp port 546 or udp port 547)&quot;</span>\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,14"}}],"payload":{"tag":"h1","lines":"9,10"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
 </body>
 </html>

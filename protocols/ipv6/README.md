@@ -14,5 +14,7 @@ markmap:
 ## [dns](test/dns/index.html)
 # [cli](cli/index.html)
 ## [iproute2](cli/iproute2/index.html)
+## [tcpdump](cli/tcpdump/index.html)
+### [radvd_dhcpv6](cli/tcpdump/radvd_dhcpv6/index.html)
 ## [rdisc6](cli/rdisc6/index.html)
 # [dhcpv6](dhcpv6/index.html)

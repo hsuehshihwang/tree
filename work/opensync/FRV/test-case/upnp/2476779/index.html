@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"case id: 2476779","children":[{"content":"status","children":[{"content":"failed","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"h2","lines":"10,11"}},{"content":"description","children":[{"content":"<code>w1 &lt;-&gt; gw</code>","children":[],"payload":{"tag":"li","lines":"13,14"}},{"content":"<code>l1 &lt;-&gt; gw</code>","children":[],"payload":{"tag":"li","lines":"14,15"}},{"content":"<code>e2 &lt;-&gt; l1</code>","children":[],"payload":{"tag":"li","lines":"15,16"}},{"content":"<code>e2 sends upnp</code>","children":[],"payload":{"tag":"li","lines":"16,17"}}],"payload":{"tag":"h2","lines":"12,13"}},{"content":"test steps","children":[{"content":"w1 connect to gw","children":[{"content":"<code>cloud home-bssids-get</code>","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"<code>client connect --bssid &lt;gw_node_bssid&gt; w1</code>","children":[],"payload":{"tag":"li","lines":"20,21"}}],"payload":{"tag":"li","lines":"18,21"}},{"content":"e2 connect to l1","children":[{"content":"<code>client eth-connect l1 e2</code>","children":[],"payload":{"tag":"li","lines":"22,23"}}],"payload":{"tag":"li","lines":"21,23"}},{"content":"e2 send upnp port forward","children":[{"content":"<code>client ssh e2</code>","children":[{"content":"<code>ip -4 -br a</code>","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"<code>upnpc -a &lt;client_e2_ip&gt; 5469 5469 TCP</code>","children":[],"payload":{"tag":"li","lines":"26,27"}},{"content":"<code>upnpc -a &lt;client_e2_ip&gt; 5469 5469 UDP</code>","children":[],"payload":{"tag":"li","lines":"27,28"}}],"payload":{"tag":"li","lines":"24,28"}}],"payload":{"tag":"li","lines":"23,28"}},{"content":"check status","children":[{"content":"<code>ssh leaf1</code>","children":[{"content":"<code>wpa_cli -i wl0 status</code>","children":[],"payload":{"tag":"li","lines":"30,31"}}],"payload":{"tag":"li","lines":"29,31"}}],"payload":{"tag":"li","lines":"28,31"}}],"payload":{"tag":"h2","lines":"17,18"}}],"payload":{"tag":"h1","lines":"9,10"}},{"content":"<a href=\"steps/index.html\">steps</a>","children":[{"content":"<a href=\"steps/003-e2-send-upnp-port-forward/index.html\">003-e2-send-upnp-port-forward</a>","children":[],"payload":{"tag":"h2","lines":"32,33"}},{"content":"<a href=\"steps/004-check-status/index.html\">004-check-status</a>","children":[],"payload":{"tag":"h2","lines":"33,34"}},{"content":"<a href=\"steps/001-w1-connect-to-gw/index.html\">001-w1-connect-to-gw</a>","children":[],"payload":{"tag":"h2","lines":"34,35"}},{"content":"<a href=\"steps/002-e2-connect-to-l1/index.html\">002-e2-connect-to-l1</a>","children":[],"payload":{"tag":"h2","lines":"35,36"}}],"payload":{"tag":"h1","lines":"31,32"}}]},{"color":["blue"],"initialExpandLevel":5})</script>
+</body>
+</html>

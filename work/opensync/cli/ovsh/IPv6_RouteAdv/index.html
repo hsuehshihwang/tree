@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"IPv6_RouteAdv","children":[{"content":"schema / columns","children":[{"content":"<pre data-lines=\"11,34\"><code class=\"language-bash\">ovsdb-client list-columns  IPv6_RouteAdv\nColumn            Type                                                                    \n----------------- ------------------------------------------------------------------------\ncurrent_hop_limit {<span class=\"hljs-string\">&quot;key&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>,<span class=\"hljs-string\">&quot;min&quot;</span>:0}                                               \nmax_adv_interval  {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;maxInteger&quot;</span>:1800,<span class=\"hljs-string\">&quot;minInteger&quot;</span>:4,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>},<span class=\"hljs-string\">&quot;min&quot;</span>:0}     \nretrans_timer     {<span class=\"hljs-string\">&quot;key&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>,<span class=\"hljs-string\">&quot;min&quot;</span>:0}                                               \ndnssl             {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;maxLength&quot;</span>:253,<span class=\"hljs-string\">&quot;minLength&quot;</span>:1,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;string&quot;</span>},<span class=\"hljs-string\">&quot;max&quot;</span>:16,<span class=\"hljs-string\">&quot;min&quot;</span>:0}\nreachable_time    {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;maxInteger&quot;</span>:3600000,<span class=\"hljs-string\">&quot;minInteger&quot;</span>:0,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>},<span class=\"hljs-string\">&quot;min&quot;</span>:0}  \nhome_agent        {<span class=\"hljs-string\">&quot;key&quot;</span>:<span class=\"hljs-string\">&quot;boolean&quot;</span>,<span class=\"hljs-string\">&quot;min&quot;</span>:0}                                               \ndefault_lifetime  {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;maxInteger&quot;</span>:65535,<span class=\"hljs-string\">&quot;minInteger&quot;</span>:0,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>},<span class=\"hljs-string\">&quot;min&quot;</span>:0}    \n_uuid             <span class=\"hljs-string\">&quot;uuid&quot;</span>                                                                  \ninterface         {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;refTable&quot;</span>:<span class=\"hljs-string\">&quot;IP_Interface&quot;</span>,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;uuid&quot;</span>}}                       \n_version          <span class=\"hljs-string\">&quot;uuid&quot;</span>                                                                  \nmanaged           {<span class=\"hljs-string\">&quot;key&quot;</span>:<span class=\"hljs-string\">&quot;boolean&quot;</span>,<span class=\"hljs-string\">&quot;min&quot;</span>:0}                                               \nprefixes          {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;refTable&quot;</span>:<span class=\"hljs-string\">&quot;IPv6_Prefix&quot;</span>,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;uuid&quot;</span>},<span class=\"hljs-string\">&quot;max&quot;</span>:64,<span class=\"hljs-string\">&quot;min&quot;</span>:0}       \npreferred_router  {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;enum&quot;</span>:[<span class=\"hljs-string\">&quot;set&quot;</span>,[<span class=\"hljs-string\">&quot;high&quot;</span>,<span class=\"hljs-string\">&quot;low&quot;</span>,<span class=\"hljs-string\">&quot;medium&quot;</span>]],<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;string&quot;</span>}}        \nmtu               {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;minInteger&quot;</span>:1280,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>},<span class=\"hljs-string\">&quot;min&quot;</span>:0}                    \nother_config      {<span class=\"hljs-string\">&quot;key&quot;</span>:<span class=\"hljs-string\">&quot;boolean&quot;</span>,<span class=\"hljs-string\">&quot;min&quot;</span>:0}                                               \nstatus            {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;enum&quot;</span>:[<span class=\"hljs-string\">&quot;set&quot;</span>,[<span class=\"hljs-string\">&quot;disabled&quot;</span>,<span class=\"hljs-string\">&quot;enabled&quot;</span>,<span class=\"hljs-string\">&quot;error&quot;</span>]],<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;string&quot;</span>}} \nrdnss             {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;refTable&quot;</span>:<span class=\"hljs-string\">&quot;IPv6_Address&quot;</span>,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;uuid&quot;</span>},<span class=\"hljs-string\">&quot;max&quot;</span>:16,<span class=\"hljs-string\">&quot;min&quot;</span>:0}      \nmin_adv_interval  {<span class=\"hljs-string\">&quot;key&quot;</span>:{<span class=\"hljs-string\">&quot;maxInteger&quot;</span>:1350,<span class=\"hljs-string\">&quot;minInteger&quot;</span>:3,<span class=\"hljs-string\">&quot;type&quot;</span>:<span class=\"hljs-string\">&quot;integer&quot;</span>},<span class=\"hljs-string\">&quot;min&quot;</span>:0}     \n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,34"}}],"payload":{"tag":"h2","lines":"10,11"}},{"content":"test samples","children":[{"content":"<pre data-lines=\"35,45\"><code class=\"language-bash\">ovsh u IPv6_RouteAdv \\\n  -w if_name==br-home \\\n  <span class=\"hljs-built_in\">enable</span>:=<span class=\"hljs-literal\">true</span> \\\n  managed:=<span class=\"hljs-literal\">false</span> other_config:=<span class=\"hljs-literal\">false</span> \\\n  prefixes:=<span class=\"hljs-string\">&apos;[&quot;2001:db8:1::/64&quot;]&apos;</span> \\\n  min_interval:=200 max_interval:=600 router_lifetime:=1800 \\\n  rdnss:=<span class=\"hljs-string\">&apos;[&quot;2001:4860:4860::8888&quot;,&quot;2001:4860:4860::8844&quot;]&apos;</span> \\\n  dnssl:=<span class=\"hljs-string\">&apos;[&quot;lan.example&quot;]&apos;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,45"}},{"content":"<pre data-lines=\"45,58\"><code class=\"language-bash\">ovsh i IPv6_RouteAdv \\if_name:=br-home \\\n  if_name:=br0 \\\n  managed:=<span class=\"hljs-literal\">false</span> \\\n  other_config:=<span class=\"hljs-literal\">false</span> \\\n  prefixes:=<span class=\"hljs-string\">&apos;[&quot;2001:db8:1::/64&quot;]&apos;</span> \\\n  rdnss:=<span class=\"hljs-string\">&apos;[&quot;2001:4860:4860::8888&quot;,&quot;2001:4860:4860::8844&quot;]&apos;</span> \\\n  dnssl:=<span class=\"hljs-string\">&apos;[&quot;lan.example&quot;]&apos;</span> \\\n  min_interval:=200 \\\n  max_interval:=600 \\\n  router_lifetime:=1800\n\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"45,58"}}],"payload":{"tag":"h2","lines":"34,35"}}],"payload":{"tag":"h1","lines":"9,10"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

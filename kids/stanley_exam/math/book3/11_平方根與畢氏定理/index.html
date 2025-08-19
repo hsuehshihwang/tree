@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"<a href=\"11_2_%E6%A0%B9%E5%BC%8F%E7%9A%84%E9%81%8B/index.html\">11_2_&#x6839;&#x5f0f;&#x7684;&#x904b;</a>","children":[],"payload":{"tag":"h1","lines":"9,10"}},{"content":"<a href=\"11_3_%E7%95%A2%E6%B0%8F%E5%AE%9A%E7%90%86/index.html\">11_3_&#x7562;&#x6c0f;&#x5b9a;&#x7406;</a>","children":[],"payload":{"tag":"h1","lines":"10,11"}},{"content":"<a href=\"11_1_%E5%B9%B3%E6%96%B9%E6%A0%B9%E8%88%87%E8%BF%91%E4%BC%BC%E5%80%BC/index.html\">11_1_&#x5e73;&#x65b9;&#x6839;&#x8207;&#x8fd1;&#x4f3c;&#x503c;</a>","children":[],"payload":{"tag":"h1","lines":"11,12"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

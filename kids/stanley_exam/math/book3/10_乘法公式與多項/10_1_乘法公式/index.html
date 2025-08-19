@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"&#x4e58;&#x6cd5;&#x516c;&#x5f0f;","children":[{"content":"\n<p data-lines=\"10,11\"><img src=\"formula.png\" alt></p>","children":[],"payload":{"tag":"li","lines":"10,11"}},{"content":"\n<p data-lines=\"11,13\"><strong>&#x4e58;&#x6cd5;&#x5206;&#x914d;&#x5f8b;&#x516c;&#x5f0f;</strong><br>\n[(a+b)(c+d) = ac + ad + bc + bd]</p>","children":[],"payload":{"tag":"li","lines":"11,14"}},{"content":"\n<p data-lines=\"14,16\"><strong>&#x548c;&#x7684;&#x5e73;&#x65b9;&#x516c;&#x5f0f;</strong><br>\n[(a+b)^2 = a^2 + 2ab + b^2]</p>","children":[],"payload":{"tag":"li","lines":"14,17"}},{"content":"\n<p data-lines=\"17,19\"><strong>&#x5dee;&#x7684;&#x5e73;&#x65b9;&#x516c;&#x5f0f;</strong><br>\n[(a-b)^2 = a^2 - 2ab + b^2]</p>","children":[],"payload":{"tag":"li","lines":"17,20"}},{"content":"\n<p data-lines=\"20,22\"><strong>&#x5e73;&#x65b9;&#x5dee;&#x516c;&#x5f0f;</strong><br>\n[(a+b)(a-b) = a^2 - b^2]</p>","children":[],"payload":{"tag":"li","lines":"20,23"}},{"content":"\n<p data-lines=\"23,24\"><strong>&#x6ce8;&#x610f;&#x4e8b;&#x9805;</strong></p>","children":[{"content":"((-a-b)^2 = (a+b)^2)","children":[],"payload":{"tag":"li","lines":"24,25"}},{"content":"((-a+b)^2 = (a-b)^2)","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"&#x516c;&#x5f0f;&#x4e2d;&#x7684; (a)&#x3001;(b) &#x53ef;&#x4ee3;&#x5165;&#x4efb;&#x4f55;&#x6578;&#x6216;&#x7b26;&#x865f;","children":[],"payload":{"tag":"li","lines":"26,28"}}],"payload":{"tag":"li","lines":"23,28"}},{"content":"\n<p data-lines=\"28,29\"><strong>&#x5229;&#x7528;&#x4e58;&#x6cd5;&#x516c;&#x5f0f;&#x6c42;&#x503c;&#x7bc4;&#x4f8b;</strong></p>","children":[{"content":"&#x5df2;&#x77e5; (a<sup>2+b</sup>2)&#x3001;(a+b) &#x53ef;&#x6c42; (ab)&#xff1a;<br>\n[(a+b)^2 = (a<sup>2+b</sup>2) + 2ab]","children":[],"payload":{"tag":"li","lines":"29,31"}},{"content":"&#x5df2;&#x77e5; (a<sup>2+b</sup>2)&#x3001;(a-b) &#x53ef;&#x6c42; (ab)&#xff1a;<br>\n[(a-b)^2 = (a<sup>2+b</sup>2) - 2ab]","children":[],"payload":{"tag":"li","lines":"31,33"}},{"content":"&#x5df2;&#x77e5; (a+b)&#x3001;(a-b) &#x53ef;&#x6c42; (ab)&#xff1a;<br>\n[(a+b)^2 = (a-b)^2 + 4ab]","children":[],"payload":{"tag":"li","lines":"33,36"}}],"payload":{"tag":"li","lines":"28,36"}}],"payload":{"tag":"h1","lines":"9,10"}},{"content":"&#x7bc4;&#x4f8b;","children":[{"content":"<strong>&#x7bc4;&#x4f8b; 1</strong> &#x5229;&#x7528;&#x5206;&#x914d;&#x5f8b;&#x6c42;&#x503c;","children":[{"content":"<pre data-lines=\"38,43\"><code data-lines=\"38,43\">&#x5229;&#x7528;&#x5206;&#x914d;&#x5f8b;&#x8a08;&#x7b97;&#x4e0b;&#x5217;&#x5404;&#x5f0f;&#x7684;&#x503c;&#xff1a;\n1.<span class=\"hljs-number\"> 34 </span>&#xd7; 487\n2.<span class=\"hljs-number\"> 29 </span>6/7 &#xd7;<span class=\"hljs-number\"> 28 </span>1/5\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"38,43"}}],"payload":{"tag":"h2","lines":"37,38"}}],"payload":{"tag":"h1","lines":"36,37"}},{"content":"<a href=\"%E7%AF%84%E4%BE%8B/index.html\">&#x7bc4;&#x4f8b;</a>","children":[{"content":"<a href=\"%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B2/index.html\">&#x7bc4;&#x4f8b;2</a>","children":[],"payload":{"tag":"h2","lines":"44,45"}},{"content":"<a href=\"%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B4/index.html\">&#x7bc4;&#x4f8b;4</a>","children":[],"payload":{"tag":"h2","lines":"45,46"}},{"content":"<a href=\"%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B3/index.html\">&#x7bc4;&#x4f8b;3</a>","children":[],"payload":{"tag":"h2","lines":"46,47"}},{"content":"<a href=\"%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B1/index.html\">&#x7bc4;&#x4f8b;1</a>","children":[],"payload":{"tag":"h2","lines":"47,48"}},{"content":"<a href=\"%E7%AF%84%E4%BE%8B/%E7%B2%BE%E7%86%9F1/index.html\">&#x7cbe;&#x719f;1</a>","children":[],"payload":{"tag":"h2","lines":"48,49"}}],"payload":{"tag":"h1","lines":"43,44"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

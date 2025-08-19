@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"fetch v6.4.3.0","children":[{"content":"<pre data-lines=\"10,33\"><code class=\"language-bash\"><span class=\"hljs-meta\">#!/bin/bash</span>\nsrc=src\nver=V_6.4.3.0\n<span class=\"hljs-built_in\">rm</span> -rf <span class=\"hljs-variable\">&#x24;src</span>\ngit <span class=\"hljs-built_in\">clone</span> https://github.com/plume-design/opensync.git <span class=\"hljs-variable\">&#x24;src</span>/core\ngit <span class=\"hljs-built_in\">clone</span> https://github.com/plume-design/opensync-platform-bcm.git <span class=\"hljs-variable\">&#x24;src</span>/platform/bcm\ngit <span class=\"hljs-built_in\">clone</span> https://github.com/plume-design/opensync-vendor-bcm-template.git <span class=\"hljs-variable\">&#x24;src</span>/vendor/bcm-template\ngit <span class=\"hljs-built_in\">clone</span> https://github.com/plume-design/opensync-service-provider-local.git <span class=\"hljs-variable\">&#x24;src</span>/service-provider/local\n<span class=\"hljs-built_in\">mkdir</span> -p <span class=\"hljs-variable\">&#x24;src</span>/3rdparty\n<span class=\"hljs-built_in\">cd</span> <span class=\"hljs-variable\">&#x24;src</span>/core\ngit checkout tags/<span class=\"hljs-variable\">&#x24;ver</span> -b <span class=\"hljs-variable\">&#x24;ver</span>\n<span class=\"hljs-built_in\">cd</span> -\n<span class=\"hljs-built_in\">cd</span> <span class=\"hljs-variable\">&#x24;src</span>/platform/bcm\ngit checkout tags/<span class=\"hljs-variable\">&#x24;ver</span> -b <span class=\"hljs-variable\">&#x24;ver</span>\n<span class=\"hljs-built_in\">cd</span> -\n<span class=\"hljs-built_in\">cd</span> <span class=\"hljs-variable\">&#x24;src</span>/vendor/bcm-template\ngit checkout tags/<span class=\"hljs-variable\">&#x24;ver</span> -b <span class=\"hljs-variable\">&#x24;ver</span>\n<span class=\"hljs-built_in\">cd</span> -\n<span class=\"hljs-comment\"># cd &#x24;src/service-provider/local</span>\n<span class=\"hljs-comment\"># git checkout tags/&#x24;ver -b &#x24;ver</span>\n<span class=\"hljs-comment\"># cd -</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"10,33"}}],"payload":{"tag":"h1","lines":"9,10"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/index.html\">4_1_&#x4e8c;&#x5143;&#x4e00;&#x6b21;&#x65b9;&#x7a0b;&#x5f0f;</a>","children":[{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/index.html\">&#x7bc4;&#x4f8b;</a>","children":[{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B2/index.html\">&#x7bc4;&#x4f8b;2</a>","children":[],"payload":{"tag":"h3","lines":"11,12"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B5/index.html\">&#x7bc4;&#x4f8b;5</a>","children":[],"payload":{"tag":"h3","lines":"12,13"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B4/index.html\">&#x7bc4;&#x4f8b;4</a>","children":[],"payload":{"tag":"h3","lines":"13,14"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B3/index.html\">&#x7bc4;&#x4f8b;3</a>","children":[],"payload":{"tag":"h3","lines":"14,15"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B6/index.html\">&#x7bc4;&#x4f8b;6</a>","children":[],"payload":{"tag":"h3","lines":"15,16"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%AF%84%E4%BE%8B1/index.html\">&#x7bc4;&#x4f8b;1</a>","children":[],"payload":{"tag":"h3","lines":"16,17"}},{"content":"<a href=\"4_1_%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E6%96%B9%E7%A8%8B%E5%BC%8F/%E7%AF%84%E4%BE%8B/%E7%B2%BE%E7%86%9F1/index.html\">&#x7cbe;&#x719f;1</a>","children":[],"payload":{"tag":"h3","lines":"17,18"}}],"payload":{"tag":"h2","lines":"10,11"}}],"payload":{"tag":"h1","lines":"9,10"}},{"content":"<a href=\"4_2_%E8%A7%A3%E4%BA%8C%E5%85%83%E4%B8%80%E6%AC%A1%E8%81%AF%E7%AB%8B%E6%96%B9%E7%A8%8B%E5%BC%8F%E8%88%87%E6%87%89%E7%94%A8%E5%95%8F%E9%A1%8C/index.html\">4_2_&#x89e3;&#x4e8c;&#x5143;&#x4e00;&#x6b21;&#x806f;&#x7acb;&#x65b9;&#x7a0b;&#x5f0f;&#x8207;&#x61c9;&#x7528;&#x554f;&#x984c;</a>","children":[],"payload":{"tag":"h1","lines":"18,19"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

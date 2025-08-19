@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"opensync","children":[],"payload":{"tag":"h1","lines":"9,10"}},{"content":"ovsh","children":[{"content":"show","children":[{"content":"simple","children":[{"content":"<code>ovsh s Manager</code>","children":[],"payload":{"tag":"li","lines":"14,15"}}],"payload":{"tag":"h3","lines":"13,14"}},{"content":"filter rows","children":[{"content":"<code>ovsh s Manager is_connected</code>","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<code>ovsh s Manager is_connected status</code>","children":[],"payload":{"tag":"li","lines":"17,18"}}],"payload":{"tag":"h3","lines":"15,16"}},{"content":"get value","children":[{"content":"<code>ovsh s Manager is_connected status -r</code>","children":[],"payload":{"tag":"li","lines":"19,20"}}],"payload":{"tag":"h3","lines":"18,19"}},{"content":"json","children":[{"content":"<code>ovsh s Manager is_connected -j</code>","children":[],"payload":{"tag":"li","lines":"21,22"}}],"payload":{"tag":"h3","lines":"20,21"}},{"content":"filter name and value","children":[{"content":"<code>ovsh s Manager -w is_connected==true is_connected status</code>","children":[],"payload":{"tag":"li","lines":"23,24"}}],"payload":{"tag":"h3","lines":"22,23"}}],"payload":{"tag":"h2","lines":"12,13"}},{"content":"update","children":[],"payload":{"tag":"h2","lines":"24,25"}},{"content":"Manager","children":[],"payload":{"tag":"h2","lines":"25,26"}},{"content":"AWLAN_Nodes","children":[],"payload":{"tag":"h2","lines":"26,27"}},{"content":"Netfilters","children":[],"payload":{"tag":"h2","lines":"27,28"}},{"content":"IPv4_Neighbors","children":[],"payload":{"tag":"h2","lines":"28,29"}}],"payload":{"tag":"h1","lines":"11,12"}},{"content":"opensync v6.4","children":[],"payload":{"tag":"h1","lines":"30,31"}},{"content":"FRV 4.0.0","children":[{"content":"cloud","children":[{"content":"bssid","children":[{"content":"<code>cloud home-bssids-get</code>","children":[{"content":"Get 2.4G / 5G bssid: mac address form","children":[],"payload":{"tag":"li","lines":"36,37"}}],"payload":{"tag":"li","lines":"35,37"}}],"payload":{"tag":"h3","lines":"34,35"}}],"payload":{"tag":"h2","lines":"33,34"}},{"content":"client","children":[{"content":"connect","children":[{"content":"wifi","children":[{"content":"<code>client connect --bssid &lt;gw_node_bssid&gt; w1</code>","children":[],"payload":{"tag":"li","lines":"40,41"}}],"payload":{"tag":"li","lines":"39,41"}},{"content":"eth","children":[{"content":"<code>client eth-connect l1 e2</code>","children":[],"payload":{"tag":"li","lines":"42,43"}}],"payload":{"tag":"li","lines":"41,43"}}],"payload":{"tag":"h3","lines":"38,39"}},{"content":"ssh","children":[{"content":"<code>client ssh w1</code>","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"<code>client ssh e2</code>","children":[],"payload":{"tag":"li","lines":"45,46"}}],"payload":{"tag":"h3","lines":"43,44"}}],"payload":{"tag":"h2","lines":"37,38"}},{"content":"test case","children":[{"content":"case id: 2451393 (upnp)","children":[{"content":"w1 connect to home-ap","children":[{"content":"w1 connect to gw","children":[{"content":"<code>cloud home-bssids-get</code>","children":[],"payload":{"tag":"li","lines":"50,51"}},{"content":"<code>client connect --bssid &lt;gw_node_bssid&gt; w1</code>","children":[],"payload":{"tag":"li","lines":"51,52"}}],"payload":{"tag":"li","lines":"49,52"}},{"content":"e2 connect to l1","children":[{"content":"<code>client eth-connect l1 e2</code>","children":[],"payload":{"tag":"li","lines":"53,54"}}],"payload":{"tag":"li","lines":"52,54"}},{"content":"e2 send upnp port forward","children":[{"content":"<code>client ssh e2</code>","children":[{"content":"<code>ip -4 -br a</code>","children":[],"payload":{"tag":"li","lines":"56,57"}},{"content":"<code>upnpc -a &lt;client_e2_ip&gt; 5469 5469 TCP</code>","children":[],"payload":{"tag":"li","lines":"57,58"}},{"content":"<code>upnpc -a &lt;client_e2_ip&gt; 5469 5469 UDP</code>","children":[],"payload":{"tag":"li","lines":"58,59"}}],"payload":{"tag":"li","lines":"55,59"}}],"payload":{"tag":"li","lines":"54,59"}}],"payload":{"tag":"h4","lines":"48,49"}}],"payload":{"tag":"h3","lines":"47,48"}},{"content":"case id: 2476779 (upnp)","children":[],"payload":{"tag":"h3","lines":"59,60"}}],"payload":{"tag":"h2","lines":"46,47"}}],"payload":{"tag":"h1","lines":"32,33"}},{"content":"OSRT","children":[],"payload":{"tag":"h1","lines":"61,62"}},{"content":"osrt1","children":[{"content":"env","children":[{"content":"IP: <code>192.168.188.101</code>","children":[],"payload":{"tag":"li","lines":"64,65"}}],"payload":{"tag":"h2","lines":"63,64"}},{"content":"config/locations","children":[{"content":"PBL-6201_OSRT1_DEV.yaml","children":[],"payload":{"tag":"li","lines":"66,67"}}],"payload":{"tag":"h2","lines":"65,66"}},{"content":"config/model_properties","children":[],"payload":{"tag":"h2","lines":"67,68"}}],"payload":{"tag":"h1","lines":"62,63"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

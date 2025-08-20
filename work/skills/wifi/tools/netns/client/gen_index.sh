@@ -4,7 +4,7 @@
 
 s=$(realpath ${BASH_SOURCE[0]})
 d=$(dirname $(realpath ${BASH_SOURCE[0]}))
-ds=$(find $d -type d -o -type l ! -path "*.git*")
+ds=$(find $d -type d ! -path "*.git*" -o -type l)
 
 # echo s=$s, d=$d ds=$ds
 

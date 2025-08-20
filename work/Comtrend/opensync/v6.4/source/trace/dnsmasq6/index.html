@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"dnsmasq6","children":[],"payload":{"tag":"h1","lines":"9,10"}},{"content":"trace dnsmasq6.conf","children":[{"content":"dnsmasq6.conf","children":[{"content":"<code>enable-ra</code>","children":[{"content":"<code>dnsmasq6_server_write_config()</code>","children":[{"content":"<code>dnsmasq6_server_apply_ev()</code>","children":[],"payload":{"tag":"li","lines":"14,15"}}],"payload":{"tag":"li","lines":"13,15"}}],"payload":{"tag":"li","lines":"12,15"}}],"payload":{"tag":"li","lines":"11,15"}},{"content":"<code>dnsmasq6_server_apply_ev()</code>","children":[{"content":"<code>cs f e dnsmasq6_server_apply_ev</code>","children":[],"payload":{"tag":"li","lines":"16,17"}},{"content":"<code>dnsmasq6_server_global_apply()</code>","children":[{"content":"<code>cs f e dnsmasq6_server_global_apply</code>","children":[],"payload":{"tag":"li","lines":"18,19"}},{"content":"<code>...</code>","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"<code>dnsmasq6_radv_apply()</code>","children":[{"content":"<code>osn_ip6_radv_apply()</code>","children":[],"payload":{"tag":"li","lines":"21,22"}}],"payload":{"tag":"li","lines":"20,22"}}],"payload":{"tag":"li","lines":"17,22"}}],"payload":{"tag":"li","lines":"15,22"}},{"content":"<code>osn_ip6_radv_apply()</code>","children":[{"content":"<code>inet_base_radv_commit()</code>","children":[{"content":"<code>inet_base_service_commit()</code>","children":[{"content":"INET_BASE_RADV","children":[{"content":"<code>cs f e INET_BASE_RADV</code>","children":[{"content":"<code>inet_base_radv()</code>","children":[],"payload":{"tag":"li","lines":"27,28"}},{"content":"<code>inet_base_radv_prefix()</code>","children":[],"payload":{"tag":"li","lines":"28,29"}},{"content":"<code>...</code>","children":[],"payload":{"tag":"li","lines":"29,30"}}],"payload":{"tag":"li","lines":"26,30"}}],"payload":{"tag":"li","lines":"25,30"}}],"payload":{"tag":"li","lines":"24,30"}}],"payload":{"tag":"li","lines":"23,30"}}],"payload":{"tag":"li","lines":"22,30"}},{"content":"<code>inet_base_radv_prefix()</code>","children":[{"content":"<code>cs f e inet_base_radv_prefix</code>","children":[{"content":"<code>inet_base_init()</code>","children":[{"content":"<code>self-&gt;inet.in_radv_prefix_fn</code>","children":[{"content":"<code>cs f e in_radv_prefix_fn</code><br>\n<code>inet_radv_prefix()</code>","children":[],"payload":{"tag":"li","lines":"34,36"}}],"payload":{"tag":"li","lines":"33,36"}}],"payload":{"tag":"li","lines":"32,36"}}],"payload":{"tag":"li","lines":"31,36"}}],"payload":{"tag":"li","lines":"30,36"}},{"content":"<code>inet_radv_prefix()</code>","children":[{"content":"<code>cs f e inet_radv_prefix</code>","children":[{"content":"<code>nm2_ipv6_routeadv_prefixes_update()</code>","children":[{"content":"<code>nm2_ipv6_routeadv_get()</code>","children":[{"content":"<code>callback_IPv6_RouteAdv()</code>","children":[],"payload":{"tag":"li","lines":"40,41"}}],"payload":{"tag":"li","lines":"39,41"}}],"payload":{"tag":"li","lines":"38,41"}}],"payload":{"tag":"li","lines":"37,41"}}],"payload":{"tag":"li","lines":"36,41"}},{"content":"<code>cs f e OVSDB_TABLE_MONITOR.*IPv6</code>","children":[{"content":"<code>nm2_ipv6_routeadv_init()</code>","children":[{"content":"<code>OVSDB_TABLE_MONITOR(IPv6_RouteAdv, false);</code>","children":[],"payload":{"tag":"li","lines":"43,45"}}],"payload":{"tag":"li","lines":"42,45"}}],"payload":{"tag":"li","lines":"41,45"}}],"payload":{"tag":"h1","lines":"10,11"}},{"content":"<a href=\"ovsh/index.html\">ovsh</a>","children":[{"content":"<a href=\"ovsh/IPv6_RouteAdv/index.html\">IPv6_RouteAdv</a>","children":[],"payload":{"tag":"h2","lines":"46,47"}}],"payload":{"tag":"h1","lines":"45,46"}},{"content":"<a href=\"conf/index.html\">conf</a>","children":[{"content":"<a href=\"conf/sample/index.html\">sample</a>","children":[],"payload":{"tag":"h2","lines":"48,49"}}],"payload":{"tag":"h1","lines":"47,48"}},{"content":"<a href=\"enable-ra/index.html\">enable-ra</a>","children":[],"payload":{"tag":"h1","lines":"49,50"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

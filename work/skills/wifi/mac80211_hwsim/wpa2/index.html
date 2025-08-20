@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"mac80211_hwsim x docker x wifi wpa2 testing","children":[{"content":"Quick Start","children":[{"content":"<pre data-lines=\"18,21\"><code class=\"language-bash\">./build.sh\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"18,21"}},{"content":"<pre data-lines=\"22,27\"><code class=\"language-bash\">./run.sh 1  <span class=\"hljs-comment\"># it will prompt 60s for you to sniffer wifi monitor interface. </span>\n<span class=\"hljs-comment\"># or</span>\n./run.sh\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,27"}},{"content":"<pre data-lines=\"28,31\"><code class=\"language-bash\">docker <span class=\"hljs-built_in\">exec</span> -it wifi-sta ping 192.168.150.1\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"28,31"}}],"payload":{"tag":"h2","lines":"13,14"}},{"content":"Files","children":[{"content":"<pre data-lines=\"36,51\"><code class=\"language-bash\">.\n&#x251c;&#x2500;&#x2500; ap_entrypoint.sh                <span class=\"hljs-comment\"># Script to set up WiFi AP container. (hostapd, dnsmasq, ip addr) </span>\n&#x251c;&#x2500;&#x2500; ap_status.sh                    <span class=\"hljs-comment\"># Script to show WiFi AP status. Need to use in container &apos;wifi-ap&apos;. </span>\n&#x251c;&#x2500;&#x2500; build.sh                        <span class=\"hljs-comment\"># Build docker image for this testing.  </span>\n&#x251c;&#x2500;&#x2500; Dockerfile.wifi                 <span class=\"hljs-comment\"># Dockerfile for building docker image.  </span>\n&#x251c;&#x2500;&#x2500; macos_ssh_wifi_mon_sample.sh    <span class=\"hljs-comment\"># Script to show the WiFi traffic between Ubuntu AP and STA container on macOS.                </span>\n&#x251c;&#x2500;&#x2500; mon_entrypoint.sh               <span class=\"hljs-comment\"># Script to set up WiFi monitor interface.    </span>\n&#x251c;&#x2500;&#x2500; README.md                       <span class=\"hljs-comment\"># README for this testing.  </span>\n&#x251c;&#x2500;&#x2500; run.sh                          <span class=\"hljs-comment\"># Script to run the AP and STA WPA2 testing. </span>\n&#x251c;&#x2500;&#x2500; sta_entrypoint.sh               <span class=\"hljs-comment\"># Script to set up WiFi STA container. (wpa_supplicant, dhclient)</span>\n&#x251c;&#x2500;&#x2500; sta_status.sh                   <span class=\"hljs-comment\"># Script to show WiFi STA status. </span>\n&#x251c;&#x2500;&#x2500; stop.sh                         <span class=\"hljs-comment\"># Script to stop all containers and mac80211_hwsim. </span>\n&#x2514;&#x2500;&#x2500; wifi_mon_sample.sh              <span class=\"hljs-comment\"># Script to show the WiFi traffic between AP and STA container on Ubuntu PC. </span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"36,51"}}],"payload":{"tag":"h2","lines":"34,35"}}],"payload":{"tag":"h1","lines":"9,10"}}]},{"color":["blue"],"initialExpandLevel":4})</script>
+</body>
+</html>

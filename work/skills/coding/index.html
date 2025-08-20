@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"<a href=\"../index.html\">go back</a>","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"coding","children":[],"payload":{"tag":"h1","lines":"9,10"}},{"content":"<a href=\"Makefile/index.html\">Makefile</a>","children":[],"payload":{"tag":"h1","lines":"10,11"}},{"content":"<a href=\"Algorithm/index.html\">Algorithm</a>","children":[{"content":"<a href=\"Algorithm/sorting/index.html\">sorting</a>","children":[{"content":"<a href=\"Algorithm/sorting/merge/index.html\">merge</a>","children":[],"payload":{"tag":"h3","lines":"13,14"}},{"content":"<a href=\"Algorithm/sorting/quick/index.html\">quick</a>","children":[],"payload":{"tag":"h3","lines":"14,15"}},{"content":"<a href=\"Algorithm/sorting/bubble/index.html\">bubble</a>","children":[],"payload":{"tag":"h3","lines":"15,16"}},{"content":"<a href=\"Algorithm/sorting/insertion/index.html\">insertion</a>","children":[],"payload":{"tag":"h3","lines":"16,17"}},{"content":"<a href=\"Algorithm/sorting/selection/index.html\">selection</a>","children":[],"payload":{"tag":"h3","lines":"17,18"}}],"payload":{"tag":"h2","lines":"12,13"}}],"payload":{"tag":"h1","lines":"11,12"}},{"content":"<a href=\"samples/index.html\">samples</a>","children":[{"content":"<a href=\"samples/html/index.html\">html</a>","children":[],"payload":{"tag":"h2","lines":"19,20"}},{"content":"<a href=\"samples/socket/index.html\">socket</a>","children":[{"content":"<a href=\"samples/socket/inet_addr/index.html\">inet_addr</a>","children":[],"payload":{"tag":"h3","lines":"21,22"}},{"content":"<a href=\"samples/socket/accept/index.html\">accept</a>","children":[],"payload":{"tag":"h3","lines":"22,23"}},{"content":"<a href=\"samples/socket/listen/index.html\">listen</a>","children":[],"payload":{"tag":"h3","lines":"23,24"}},{"content":"<a href=\"samples/socket/select/index.html\">select</a>","children":[],"payload":{"tag":"h3","lines":"24,25"}},{"content":"<a href=\"samples/socket/bind/index.html\">bind</a>","children":[],"payload":{"tag":"h3","lines":"25,26"}},{"content":"<a href=\"samples/socket/socket/index.html\">socket</a>","children":[],"payload":{"tag":"h3","lines":"26,27"}}],"payload":{"tag":"h2","lines":"20,21"}},{"content":"<a href=\"C/samples/index.html\">samples</a>","children":[{"content":"<a href=\"C/samples/socket/index.html\">socket</a>","children":[{"content":"<a href=\"C/samples/socket/UDP/index.html\">UDP</a>","children":[],"payload":{"tag":"h4","lines":"29,30"}},{"content":"<a href=\"C/samples/socket/UNIX/index.html\">UNIX</a>","children":[],"payload":{"tag":"h4","lines":"30,31"}},{"content":"<a href=\"C/samples/socket/TCP/index.html\">TCP</a>","children":[],"payload":{"tag":"h4","lines":"31,32"}}],"payload":{"tag":"h3","lines":"28,29"}}],"payload":{"tag":"h2","lines":"27,28"}}],"payload":{"tag":"h1","lines":"18,19"}}]},{"color":["blue"],"initialExpandLevel":100})</script>
+</body>
+</html>

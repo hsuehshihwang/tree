@@ -31,7 +31,7 @@ EOF
   for md in $mds; do
     cat $md >> README.md
   done
-  l=$(find . -type d -maxdepth 4 ! -path "*.git*" -o -type l | sed -e 's%^./%%' -e '/^.$/d')
+  l=$(find . -maxdepth 4 -type d ! -path "*.git*" -o -type l | sed -e 's%^./%%' -e '/^.$/d')
   for li in $l; do
     # echo "# [${li}](${li}/index.html)" >> README.md
     echo "${li}" | awk -F "/" 'BEGIN{n=0} { for(i=1;i<=NF;i++){ printf "#"; if(i==NF) print " ["$i"]""("$0"/index.html)"; } }' >> README.md

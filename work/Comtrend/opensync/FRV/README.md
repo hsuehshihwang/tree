@@ -19,3 +19,5 @@ markmap:
 ## [cloud](cli/cloud/index.html)
 ### [topology](cli/cloud/topology/index.html)
 ## [switch](cli/switch/index.html)
+### [vlan](cli/switch/vlan/index.html)
+#### [ipv6](cli/switch/vlan/ipv6/index.html)

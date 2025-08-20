@@ -7,5 +7,3 @@ markmap:
 ---
 
 # [go back](../index.html)
-# [vlan](vlan/index.html)
-## [ipv6](vlan/ipv6/index.html)

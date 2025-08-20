@@ -7,5 +7,7 @@ markmap:
 ---
 
 # [go back](../index.html)
-# [vlan](vlan/index.html)
-## [ipv6](vlan/ipv6/index.html)
+# ipv6 vlan 201 for gw
+```bash
+switch vlan-set 201 untagged gw_eth0
+```

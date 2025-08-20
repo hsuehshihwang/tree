@@ -22,6 +22,7 @@ markmap:
 ### [cloud](FRV/cli/cloud/index.html)
 #### [topology](FRV/cli/cloud/topology/index.html)
 ### [switch](FRV/cli/switch/index.html)
+#### [vlan](FRV/cli/switch/vlan/index.html)
 # [v6.4](v6.4/index.html)
 ## [source](v6.4/source/index.html)
 ### [trace](v6.4/source/trace/index.html)

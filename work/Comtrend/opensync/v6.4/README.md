@@ -18,3 +18,6 @@ markmap:
 #### [incomplete-creation-issue](source/trace/vaps/incomplete-creation-issue/index.html)
 ## [fetch](source/fetch/index.html)
 # [ipv6](ipv6/index.html)
+## [odhcp6c](ipv6/odhcp6c/index.html)
+### [files](ipv6/odhcp6c/files/index.html)
+#### [odhcp6c.sh](ipv6/odhcp6c/files/odhcp6c.sh/index.html)

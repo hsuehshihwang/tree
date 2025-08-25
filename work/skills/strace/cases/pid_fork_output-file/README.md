@@ -7,3 +7,8 @@ markmap:
 ---
 
 # [go back](../index.html)
+# cli
+## without filtering system call
+```bash
+strace -p $(pidof nm) -f -o /tmp/strace.log
+```

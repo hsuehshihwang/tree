@@ -7,8 +7,5 @@ markmap:
 ---
 
 # [go back](../index.html)
-# expires
-- Comtrend SDK 
-  - iproute2-4.3.0
-    - no expires
-  - iproute2-6.16.0: supported
+# enable vlan for FRV ipv6 testing
+- `switch vlan-set 201 untagged gw_eth0`

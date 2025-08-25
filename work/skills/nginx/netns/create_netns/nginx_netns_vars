@@ -1,0 +1,7 @@
+NS=ns-nginx
+HOST_IF=veth-host
+NS_IF=veth-ns
+HOST_IP=10.200.1.1
+HOST_MASK=24
+NS_IP=10.200.1.2
+NS_MASK=24
